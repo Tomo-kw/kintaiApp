@@ -15,11 +15,10 @@ class CreateBranchsTable extends Migration
     {
         Schema::create('branchs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('branch_name');       // 拠点名
-            $table->string('branch_kana');       // 拠点名カナ   
+            $table->string('branch_name');       // 拠点名 
             $table->string('branch_address');    // 拠点拠点住所
-            $table->dateTime('start_time');      // 営業開始時間
-            $table->dateTime('end_time');        // 営業終了時間
+            $table->time('start_time');          // 営業開始時間
+            $table->time('end_time');            // 営業終了時間
             $table->boolean('business_sun_day'); // 営業曜日：日
             $table->boolean('business_mon_day'); // 営業曜日：月
             $table->boolean('business_tue_day'); // 営業曜日：火

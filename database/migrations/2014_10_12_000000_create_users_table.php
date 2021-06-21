@@ -17,7 +17,6 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('branch_id'); // 拠点ID
             $table->string('name');                  // 名前
-            $table->string('kana_name');             // 名前カナ
             $table->string('email')->unique();       // メールアドレス
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');              // パスワード
